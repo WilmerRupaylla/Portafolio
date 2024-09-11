@@ -1,0 +1,142 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+/*! CONTACT ME */
+
+
+
+
+iframe {
+    width: 100%;
+}
+
+.contacto {
+    position: relative;
+
+    .container {
+
+        // background-color: rgb(255, 255, 255);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.formulario-contacto {
+    background-color: rgb(255, 255, 255);
+    padding: 4rem;
+  width: 90%;
+    margin: 0 auto;
+    
+    /*! Table Vertical  Min:768px */
+    
+    @include m.table_vertical{
+          width: 60%;
+    }
+
+}
+
+.formulario {
+    display: grid;
+  
+    gap: 3rem;
+    padding: 3rem 0;
+    
+    /*! Table Vertical  Min:768px */
+    
+    @include m.table_vertical{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+input {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 1rem;
+  
+
+}
+
+.nombre {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(211, 211, 211);
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+
+    span i {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+        color: rgb(122, 122, 122);
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+.mensaje{
+    padding: 1rem;
+}
+textarea{
+    border: none;
+    outline: none;
+    width: 100%;
+    resize:none;
+    border-bottom: 2px solid  rgb(28, 93, 212);
+}
+
+textarea::placeholder{
+    // padding: 2rem 0;
+    position: absolute;
+    bottom: 1.5rem;
+    text-align: right;
+    touch-action: manipulation;
+}
+.boton {
+    padding: 1rem;
+
+    input{
+        width: auto;
+        padding: 1.5rem 3rem;
+        border-radius: 0.5rem;
+        // font-weight: 500;
+        background-color: rgb(28, 93, 212);
+        color:#fff ;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.information h5{
+margin-bottom: 2rem;
+font-size: 1.8rem;
+font-weight: normal;
+}

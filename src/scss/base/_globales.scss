@@ -1,0 +1,86 @@
+/*! Globales */
+
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: v.$family;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // margin: 0;
+  font-family: v.$heading;
+  // text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-family: v.$enlaces;
+}
+
+ul {
+  list-style: none;
+}
+
+.centrar {
+  text-align: center;
+  &::after {
+    margin: 0 auto;
+  }
+  &::before {
+    margin: 0 auto;
+  }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercasse {
+  text-transform: uppercase;
+}
+
+.color{
+  color: #fff
+}
+
+.container{
+  
+  /*! Container - Movil */
+  @include m.centrado-movil(95%);
+  
+  /*! Container - Laptop */
+  @include m.laptop{
+    @include m.centrado-laptop(90%);
+  }
+  
+  /*! Container - Desktop */
+  @include m.desktop{
+    @include m.centrado-desktop(85%);
+  }
+}
+
+.no-margin{
+  margin-bottom: 0!important;
+}

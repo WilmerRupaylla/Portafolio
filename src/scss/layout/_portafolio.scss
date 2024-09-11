@@ -1,0 +1,85 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+
+
+/*! PORTAFOLIO */
+
+
+.portafolio {
+    padding: 5rem 0;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.portafolio-enlaces i {
+    display: none;
+    color: v.$c-primario;
+    font-size: 2.5rem;
+    background-color: rgb(10, 176, 253);
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.5rem;
+    
+    /*! Table Horizontal Min:992px */
+    
+    @include m.table_horizontal{
+        display: inline-block;
+    }
+}
+
+.grid-portafolio {
+
+    display: grid;
+
+    padding: 8rem 0.2rem;
+    gap: 3rem;
+    overflow: hidden;
+
+
+    /*! Table Horizontal Min:992px */
+
+    @include m.table_horizontal {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 350px);
+    }
+
+    .grid-item-portafolio {
+        box-shadow: 0 0 5px rgb(139, 129, 129);
+        opacity: 0.7;
+        transition: all 0.5s;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+
+    }
+}
+
+.power-bi {
+    /*! Table Horizontal Min:992px */
+
+    @include m.table_horizontal {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+}
+
+.soluciones {
+    /*! Table Horizontal Min:992px */
+
+    @include m.table_horizontal {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+}

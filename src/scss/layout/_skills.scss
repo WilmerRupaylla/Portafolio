@@ -1,0 +1,64 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+
+
+/*! SKILLS */
+
+
+.skills {
+    padding: 5rem 0;
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+
+}
+
+
+.content-skills {
+    display: grid;
+    padding: 3rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 15px 2px rgba(51, 51, 51, 0.178);
+
+    /*! Table Horizontal Min:992px */
+
+    @include m.table_horizontal {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+}
+
+.item {
+    padding: 1.5rem 0;
+}
+
+.progres {
+    height: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.445);
+}
+
+.nombre-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.siete {
+    width: 70%;
+    background-color: rgb(0, 176, 199);
+    height: 100%;
+}
+
+.ocho {
+    width: 80%;
+    background-color: rgb(0, 176, 199);
+    height: 100%;
+}
+
+.nueve {
+    width: 90%;
+    background-color: rgb(0, 176, 199);
+    height: 100%;
+}

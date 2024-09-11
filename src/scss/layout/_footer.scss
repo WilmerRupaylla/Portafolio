@@ -1,0 +1,58 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+
+/*! FOOTER */
+
+
+.footer{
+    background-color:  rgb(12, 92, 167);
+    padding: 2rem 0;
+    p{
+        margin: 0;
+    }
+}
+
+
+.footer-redes{
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    i{
+        font-size: 3rem;
+        color: rgb(248, 248, 248);
+    }
+
+    
+    /*! Table Vertical  Min:768px */
+    
+    @include m.table_vertical{
+        
+    }
+}
+
+
+.footer-creador{
+    padding: 1rem;
+    display: flex;
+   flex-direction: column;
+  align-items: center;
+    h4{
+        font-size: 2rem;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+    p{
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    
+    /*! Table Vertical  Min:768px */
+    
+    @include m.table_vertical{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
